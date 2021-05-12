@@ -1,7 +1,7 @@
 -module(bogo).
 -import(lists, [nth/2]).
 -import(rand, [uniform/0]).
--export([bogo/1, start/0]).
+-export([bogo/1]).
 
 head([]) -> [];
 head([H | _]) -> H.
@@ -43,6 +43,3 @@ bogo(List) ->
     true -> List;
     false -> bogo(shuffle(List))
   end.
-
-start() ->
-  bogo([1]).
